@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --blue-500: hsl(223, 87%, 63%);
+  --gray-400: hsl(0, 0%, 59%);
+  --blue-950: hsl(209, 33%, 12%);
+  --red-400: hsl(354, 100%, 66%);
+} 
+
+* {
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+*:focus-visible {
+  outline: 2px dashed var(--blue-500);
+  outline-offset: 4px;
+}
+
+.notify-button {
+  color: white;
+  background-color: var(--blue-500);
+  border-radius: 32px;
+  border: none;
+  font-weight: 600;
+  padding: 1rem 1.8rem;
+  box-shadow: 0px 3px 50px 10px color-mix(in srgb, var(--blue-500) 30%, transparent);
+  transition-duration: 300ms;
+}
+
+.notify-button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--blue-950);
+}
+
+.email-input {
+  border: 1px solid var(--gray-400);
+  border-radius: 32px;
+  color: var(--blue-950);
+  padding: 1rem 1.8rem;
+  font-weight: 600;
+}
+
+.social-button {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--blue-500);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  background-color: white;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 1rem;
+  width: min(100%, 38rem);
+  margin: 3rem 0;
+}
+
+h1 {
+  color: var(--gray-400);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.email-field {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.email-input {
+  width: 100%;
+}
+
+.email-input--invalid {
+  border-color: var(--red-400);
+}
+
+.email-error {
+  margin: 0.5rem 1.8rem 0;
+  color: var(--red-400);
+  font-size: 0.75rem;
+  font-style: italic;
+  text-align: left;
+}
+
+@media (max-width: 450px) {
+  .subscribe-form {
+    flex-direction: column;
+  }
+}
+
+.social-button img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(43%) sepia(88%) saturate(1347%) hue-rotate(197deg) brightness(100%) contrast(92%);
+  transition: filter 180ms ease;
+}
+
+.social-button:hover {
+  background-color: var(--blue-500);
+  border-color: var(--blue-500);
+}
+
+.social-button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.social-button-container {
+  display: flex;
+  gap: 0.75rem;
+}
+
+#dashboardIllustration {
+  display: block;
+  width: min(100%, 38rem);
+  height: auto;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.footer-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 8rem);
+  margin: 4rem;
+  text-align: center;
+}
