@@ -21,6 +21,7 @@ function clearErrorWhenValid() {
       <input
         ref="emailInput"
         type="email"
+        name="email"
         class="email-input"
         :class="{ 'email-input--invalid': hasInvalidEmail }"
         :aria-invalid="hasInvalidEmail"
