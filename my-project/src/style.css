@@ -5,6 +5,8 @@
   --gray-400: hsl(0, 0%, 59%);
   --blue-950: hsl(209, 33%, 12%);
   --red-400: hsl(354, 100%, 66%);
+  --page-bg: white;
+  --field-bg: white;
 } 
 
 * {
@@ -146,6 +148,10 @@ h1 {
   text-align: center;
 }
 
+.footer-copy a {
+  color: var(--blue-500);
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -154,4 +160,33 @@ main {
   min-height: calc(100vh - 8rem);
   margin: 4rem;
   text-align: center;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--blue-950);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --gray-400: hsl(215, 20%, 72%);
+    --blue-950: hsl(210, 40%, 96%);
+    --red-400: hsl(354, 100%, 74%);
+    --page-bg: hsl(210, 28%, 9%);
+    --field-bg: hsl(210, 25%, 15%);
+  }
+
+  main > img:first-child {
+    filter: brightness(0) invert(1);
+  }
+
+  .email-input,
+  .social-button {
+    background-color: var(--field-bg);
+  }
+
+  .email-input::placeholder {
+    color: var(--gray-400);
+  }
 }
