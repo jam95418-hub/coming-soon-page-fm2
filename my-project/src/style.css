@@ -12,6 +12,7 @@
   font-family: "Libre Franklin", sans-serif;
   font-weight: 300;
   margin: 0;
+  transition-duration: 400ms;
 }
 
 *:focus-visible {
@@ -27,7 +28,6 @@
   font-weight: 600;
   padding: 1rem 1.8rem;
   box-shadow: 0px 3px 50px 10px color-mix(in srgb, var(--blue-500) 30%, transparent);
-  transition-duration: 300ms;
 }
 
 .notify-button:hover {
@@ -62,6 +62,7 @@ strong {
 
 .subscribe-form {
   display: flex;
+  align-items: flex-start;
   gap: 1rem;
   width: min(100%, 38rem);
   margin: 3rem 0;
@@ -97,6 +98,7 @@ h1 {
 @media (max-width: 450px) {
   .subscribe-form {
     flex-direction: column;
+    align-items: stretch;
   }
 }
 
