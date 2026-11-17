@@ -1,7 +1,5 @@
 <script setup>
 import SubscribeForm from './components/SubscribeForm.vue';
-
-// Your JavaScript logic (like email validation) goes here
 </script>
 
 <template>
